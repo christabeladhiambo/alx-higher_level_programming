@@ -13,14 +13,14 @@ void print_python_list_info(PyObject *p)
 
     if(PyList_CheckExact(p))
     {
-	size = ((PyVarObject *)p)->ob_size;
-	alloc = ((PyListObject *)p)->allocated;
-	printf("[*] Size of the Python List = %lu\n", size);
+        size = ((PyVarObject *)p)->ob_size;
+        alloc = ((PyListObject *)p)->allocated;
+        printf("[*] Size of the Python List = %lu\n", size);
 		printf("[*] Allocated = %lu\n", alloc);
 
-	for (i = 0; i < size; i++)
-	{
-	    printf("Element %ld: %s\n", i, ((PyListObject *)p)->ob_item[i]->ob_type->tp_name);
-	}
+        for (i = 0; i < size; i++)
+        {
+            printf("Element %ld: %s\n", i, ((PyListObject *)p)->ob_item[i]->ob_type->tp_name);
+        }
     }
 }
