@@ -1,4 +1,4 @@
-#!/usr/bin/ppython3
+#!/usr/bin/python3
 
 """
 Task 1 for the 0x07 Python test driven development
